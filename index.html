@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashflow</title>
+    <link rel="stylesheet" href="cashflow.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="add-item">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for=""></label>
+                    <button class="btn btn-primary" onclick="addProduct()">Add</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="show-item">
+                <table class="table table-hovered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product name</th>
+                            <th>Quantity</th>
+                            <th>Price
+                                <span title="Acsending" onclick="sort('asc')">&#x25B2;</span>
+                                <span title="Descending" onclick="sort('desc')">&#x25BC; </span>
+                            </th>
+                            <th>Amount</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4" class="text-right">Total amount: </th>
+                            <th id="totalAmount" class="text-right"></th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="cashflow.js"></script>
+</body>
+</html>
