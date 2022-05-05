@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Cashflow</title>
     <link rel="stylesheet" href="cashflow.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -35,13 +37,30 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Product name</th>
-                            <th>Quantity</th>
-                            <th>Price
-                                <span title="Acsending" onclick="sort('asc')">&#x25B2;</span>
-                                <span title="Descending" onclick="sort('desc')">&#x25BC; </span>
+                            <th>
+                                Product name
+                                <span title="Acsending"
+                                    onclick="sort({direction: 'asc', field: 'productName'})">&#x25B2;</span>
+                                <span title="Descending"
+                                    onclick="sort({direction: 'desc', field: 'productName'})">&#x25BC; </span>
                             </th>
-                            <th>Amount</th>
+                            <th>Quantity
+                                <span title="Acsending" onclick="sort({direction: 'asc', field: 'quantity'})">&#x25B2;</span>
+                                <span title="Descending" onclick="sort({direction: 'desc', field: 'quantity'})">&#x25BC;
+                                </span>
+                            </th>
+                            <th>Price
+                                <span title="Acsending"
+                                    onclick="sort({direction: 'asc', field: 'price'})">&#x25B2;</span>
+                                <span title="Descending" onclick="sort({direction: 'desc', field: 'price'})">&#x25BC;
+                                </span>
+                            </th>
+                            <th>Amount
+                                <span title="Acsending"
+                                    onclick="sort({direction: 'asc', field: 'amount'})">&#x25B2;</span>
+                                <span title="Descending" onclick="sort({direction: 'desc', field: 'amount'})">&#x25BC;
+                                </span>
+                            </th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -57,7 +76,14 @@
                 </table>
             </div>
         </div>
+        <div class="row">
+            <div class="pagination">
+                <ul>
+                </ul>
+            </div>
+        </div>
     </div>
     <script src="cashflow.js"></script>
 </body>
+
 </html>

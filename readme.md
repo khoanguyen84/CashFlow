@@ -6,8 +6,8 @@
 + Array/ Array Methods (map, reduce, findIndex, find,...)
 + LocalStorage
 4. Git
-+ github
-+ deloy site sử dụng github
++ Github
++ deploy site sử dụng Github
 
 ## Sản phẩm
 1. link git: https://github.com/khoanguyen84/CashFlow

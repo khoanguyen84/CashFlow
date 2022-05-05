@@ -13,7 +13,7 @@
     width: 100%;
     margin-bottom: 3px;
 }
-.add-item, .show-item{
+.add-item, .show-item, .pagination{
     background-color: #a6abaf;
     padding: 10px 10px;
     border-radius: 5px;
@@ -95,7 +95,6 @@
     padding: 5px 0px;
     color:#fff;
 }
-
 .text-right{
     text-align: right;
 }
@@ -112,4 +111,32 @@
 
 .d-none{
     display: none;
+}
+
+.pagination>ul{
+    list-style: none;
+}
+.pagination>ul>li{
+    display: inline-block;
+}
+.pagination>ul>li>button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 4px;
+}
+.pagination>ul>li>button:hover{
+    background-color: #515253;
+    color: #EFEFEF;
+}
+.active>button{
+    background-color: #515253;
+    color: #EFEFEF;
+}
+@media (min-width: 600px) {
+    .btn{
+        margin-bottom: 3px;
+    }
 }
