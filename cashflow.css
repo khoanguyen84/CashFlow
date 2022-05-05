@@ -132,7 +132,7 @@
     color: #EFEFEF;
 }
 .active>button{
-    background-color: #515253;
+    background-color: #777a7e;
     color: #EFEFEF;
 }
 @media (min-width: 600px) {
