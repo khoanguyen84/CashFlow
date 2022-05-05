@@ -13,8 +13,8 @@ const key_data = "product_data";
 const sort_asc = "asc";
 const sort_desc = "desc";
 const page_size = 5;
-const current_page = 1;
 const default_page_number = 1;
+var current_page = 1;
 
 
 function init() {
@@ -32,12 +32,12 @@ function init() {
     }
 }
 
-function renderPagination(page_size, current_page){
-    let page_number = Math.ceil(products.length/page_size)
+function renderPagination(page_size, page_number){
+    let total_page = Math.ceil(products.length/page_size)
     let pagination =document.querySelector(".pagination>ul");
     pagination.innerHTML = "";
-    for(let i = 1; i <= page_number; i++){
-        pagination.innerHTML += `<li class="page-item ${current_page==i ? 'active' : ''}"><button onclick='paging(${i})'>${i}</button></li>`
+    for(let i = 1; i <= total_page; i++){
+        pagination.innerHTML += `<li class="page-item ${page_number==i ? 'active' : ''}"><button onclick='paging(${i})'>${i}</button></li>`
     }
 }
 
@@ -155,7 +155,7 @@ function sort(option) {
     else {
         products.reverse();
     }
-    renderProduct(products, default_page_number);
+    renderProduct(products, current_page);
 }
 
 function getProductById(pdtId) {
@@ -209,6 +209,7 @@ function update(pdtId) {
 }
 
 function paging(page_number){
+    current_page = page_number;
     renderPagination(page_size, page_number)
     renderProduct(products, page_number);
 }
